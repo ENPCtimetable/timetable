@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Ma page d'accueil{% endblock %}
+
+{% block content_date_time %}
+{% include "date_time/date_time.html" %}
+{% endblock %}
+
+
+{% block content_variable %}
+
+{% if envoi %}
+<br>Type de salle : {{ room_type }}
+<br>{{ room_name }}
+<br> {{ dispo_time }}
+<br> {{ end }}
+
+
+{% else %}<form action="{% url "room_available.views.home" %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+{% endif %}
+{% endblock %}
+
+

@@ -1,0 +1,28 @@
+{% load static %}
+
+
+<header><h2>Application d'emploi du temps et de recherche de salles</h2></header>
+
+    <nav>
+       {% block nav %}
+<a href="{% url "custom_timetable.views.home" %}"><img src="{% static 'images/date_time/icon_profile.jpg' %}"></code></a>
+<a href="{% url "room_available.views.home" %}"><img src="{% static 'images/date_time/icon_room.jpg' %}"></code></a>
+
+       {% endblock %}
+   </nav>
+    
+<br>
+User : {{ user_firstname }} {{ user_lastname }} <br><br>
+Today is : {{ day }}  <br><br>
+<FONT COLOR= {{ color.0 }} > L </FONT>
+<FONT COLOR= {{ color.1 }} > M </FONT>
+<FONT COLOR= {{ color.2 }} > M </FONT>
+<FONT COLOR= {{ color.3 }} > J </FONT>
+<FONT COLOR= {{ color.4 }} > V </FONT>
+<FONT COLOR= {{ color.5 }} > S </FONT>
+<FONT COLOR= {{ color.6 }} > D </FONT><br>
+
+
+
+
+

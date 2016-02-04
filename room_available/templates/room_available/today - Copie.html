@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Ma page d'accueil{% endblock %}
+{% block content %}
+    <h2>Bienvenue !</h2>
+    <p>
+
+
+       User : {{ user_firstname }} {{ user_lastname }} <br><br>
+Today is : {{ day }}  <br><br>
+<FONT COLOR= {{ color1 }} > L </FONT>
+<FONT COLOR= {{ color2 }} > M </FONT>
+<FONT COLOR= {{ color3 }} > M </FONT>
+<FONT COLOR= {{ color4 }} > J </FONT>
+<FONT COLOR= {{ color5 }} > V </FONT>
+<FONT COLOR= {{ color6 }} > S </FONT>
+<FONT COLOR= {{ color7 }} > D </FONT><br><br>
+{{ list }}
+
+
+    </p>
+{% endblock %}
+
